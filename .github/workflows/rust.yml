@@ -20,6 +20,7 @@ jobs:
       run: |
         for dir in $(ls -d */); do
           echo "Building and testing $dir"
+          cd $dir
           cargo build --verbose
           cargo test --verbose
           cd ..
