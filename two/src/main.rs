@@ -1,5 +1,4 @@
 use std::fs;
-use std::collections::HashMap;
 
 
 fn read_data() -> String {
@@ -9,6 +8,12 @@ fn read_data() -> String {
 
 
 fn solve(data: String) -> i32 {
+  for line in data.lines() {
+    if let Some((a, b)) = line.split_once(' ') {
+      println!("{} {}", a, b);
+    }
+  }
+  1;
 }
 
 
